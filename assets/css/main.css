@@ -1,0 +1,49 @@
+@font-face {
+  font-family: sf;
+  src: url("../fonts/sf-light.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sf;
+  text-transform: uppercase;
+}
+
+body {
+  background: url(../img/coffee.jpg);
+  background-size: cover;
+  backdrop-filter: blur(3px);
+}
+
+.caption {
+  position: relative;
+}
+
+.caption::before, .caption::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  background: white;
+  border-radius: 50%;
+}
+
+.caption::before {
+  left: -10px;
+}
+
+.caption::after {
+  right: -10px;
+}
+
+@media screen and (max-width: 650px) {
+  .li {
+    display: none;
+  }
+  .custom {
+    justify-content: center;
+  }
+}
